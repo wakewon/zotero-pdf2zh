@@ -16,6 +16,8 @@ services:
             - TZ=Asia/Shanghai
             - HF_ENDPOINT=https://hf-mirror.com
         volumes:
-            - ./zotero-pdf2zh/translated:/app/translated
-            - ./zotero-pdf2zh/config.json:/app/config.json
-            # - ./zotero-pdf2zh/LXGWWenKai-Regular.ttf:/app/LXGWWenKai-Regular.ttf
+            - ./runtime-resources/translated:/app/translated
+            - ./runtime-resources/config.json:/app/config.json
+            - ./runtime-resources/server.py:/app/server.py
+            - ./runtime-resources/fonts:/app/fonts
+            - ./runtime-resources/fonts/LXGWWenKai-Regular.ttf:/app/LXGWWenKai-Regular.ttf
